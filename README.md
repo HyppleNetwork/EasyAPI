@@ -1,5 +1,6 @@
 # EasyAPI
 _Made for making games more easy_
+
 authors:
  - JernejTDO
  - alandioda (made regions)
