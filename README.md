@@ -24,8 +24,8 @@ Regions.addRegion(region);
 ```
 
 Region Events
-> PlayerEnterRegionEvent - When a player joins the region.
-> PlayerExitRegionEvent - When a player leaves a region.
+ - PlayerEnterRegionEvent - When a player joins the region.
+ - PlayerExitRegionEvent - When a player leaves a region.
 ```sh
 @EventHandler
 public void regionEnter(PlayerEnterRegionEvent event) {
