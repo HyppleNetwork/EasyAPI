@@ -15,7 +15,7 @@ import net.md_5.bungee.api.ChatColor;
 public class EasyAPI extends JavaPlugin {
 
 	private static EasyAPI plugin;
-	public static EasyMySQL mysql;
+	private static EasyMySQL mysql;
 	
 	@Override
 	public void onEnable() {
@@ -46,12 +46,21 @@ public class EasyAPI extends JavaPlugin {
 		return plugin;
 	}
 	
+	public static EasyMySQL getMySQL() {
+		return mysql;
+	}
+	
 	private static void defaultFile() {
 		JsonManager.createJsonFile("EasyAPI");
 	}
 	
 	public static void createPluginConfig(Plugin plugin) {
 		JsonManager.createJsonFile(plugin.getName());
+	}
+	
+	public static void setupMySQL(String host, String dataBase, String username, String password) {
+		Bukkit.getConsoleSender().sendMessage(ChatColor.of(new Color(51,255,255))+"EasyAPI §7- "+ChatColor.of(new Color(0,255,0))+"connecting to database.");
+		mysql = new EasyMySQL(host, dataBase, username, password);
 	}
 }
 

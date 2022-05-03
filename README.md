@@ -16,7 +16,7 @@ Create a region
  - First you need to make to make 2 locations.
  - Create the region.
  - Last step add the region to the list.
-```sh
+```java
 Location loc1 = new Location(Bukkit.getWorld("<World Name>"), 0, 0, 0);
 Location loc2 = new Location(Bukkit.getWorld("<World Name>"), 0, 0, 0);
 Region region = new Region("<Region Name>", loc1, loc2);
@@ -26,7 +26,7 @@ Regions.addRegion(region);
 Region Events
  - PlayerEnterRegionEvent - When a player joins the region.
  - PlayerExitRegionEvent - When a player leaves a region.
-```sh
+```java
 @EventHandler
 public void regionEnter(PlayerEnterRegionEvent event) {
 }
@@ -37,7 +37,7 @@ public void Region(PlayerExitRegionEvent event) {
 ```
 
 Get info of region.
-```sh
+```java
 Region region = null; //Your region
 Location loc = null;  //Bukkit location
 
@@ -50,7 +50,7 @@ Regions.getRegionsInLocation(loc); //List of all the regions in that location.
 ```
 ## Json Manager
 You need to use Google`s json dependency.
-```sh
+```html
 <dependency>  
     <groupId>com.googlecode.json-simple</groupId>  
     <artifactId>json-simple</artifactId>  
@@ -59,7 +59,7 @@ You need to use Google`s json dependency.
 ```
 
  Json Features
-```sh
+```java
 import net.hypple.EasyAPI.Json.JsonManager;
 
 JsonManager.createJsonFile("<File Name>");
@@ -70,7 +70,7 @@ JsonManager.updateJsonBody("<File Name>", JSONObject);
 ## MySQL
 Connect to database.
 _put in onEnable()_
-```sh
+```java
 @Override
 public void onEnable() {
 	EasyAPI.setupMySQL("Host", "Data Base", "Username", "Password");
@@ -78,7 +78,7 @@ public void onEnable() {
 ```
 
 You need to install this dependency
-```sh
+```yml
 <dependency>
 	<groupId>mysql</groupId>
 	<artifactId>mysql-connector-java</artifactId>
@@ -87,14 +87,14 @@ You need to install this dependency
 ```
 
 Get the connection to data base.
-```sh
-EasyAPI.mysql.GetConnection();
+```java
+EasyAPI.getMySQL().GetConnection();
 ```
 
 ## Hex Coler Codes
 Its for the version 1.16+ that support RGB. You can you this on spigot and Bungee servers.
 _You just need to put the & symbol in front of the hex code_
-```sh
+```java
 Player player = null; //Your player 
 player.sendMessage(HexColors.replaceHexCodes("&#00f2ff message in your coler."));
 ```
