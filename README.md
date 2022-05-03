@@ -59,7 +59,7 @@ You need to use Google`s json dependency.
 ```
 
  Json Features
-```sh
+```java
 import net.hypple.EasyAPI.Json.JsonManager;
 
 JsonManager.createJsonFile("<File Name>");
