@@ -78,9 +78,9 @@ public void onEnable() {
 ```
 
 You need to install this dependency
-```yml
+```html
 <dependency>
-	<groupId>mysql</groupId>
+    <groupId>mysql</groupId>
 	<artifactId>mysql-connector-java</artifactId>
 	<version>8.0.21</version>
 </dependency>
