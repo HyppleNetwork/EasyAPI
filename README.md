@@ -5,6 +5,19 @@ authors:
  - JernejTDO
  - alandioda (made regions)
 
+```html
+<repository>
+   <id>maven-releases</id>
+   <url>http://jernejtdo.si:8081/repository/maven-releases/</url>
+</repository>
+
+<dependency>
+  <groupId>net.hypple</groupId>
+  <artifactId>EasyAPI</artifactId>
+  <version>1.1.2</version>
+</dependency>
+```
+
 ## Features
  - Regions (Create regions and use their system)
  - Json File manager (Save files, get body and option to create them)
